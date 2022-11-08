@@ -1,0 +1,1 @@
+1) Lombok is used to avoid manually coding getters, setters, toString. Book class is annotated with @Data to action this.

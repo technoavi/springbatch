@@ -1,0 +1,51 @@
+server:
+  port: 9090
+# app name and build version updated during build process from Maven properties.
+info:
+  app:
+    name: '@project.artifactId@'
+  build:
+    version: '@project.version@'
+
+
+# Logging
+logging:
+  level:
+    root: INFO                           # ERROR level at root
+    org.springframework: INFO             # INFO level for Spring
+    app: INFO                             # INFO level for application
+  pattern:
+    console: "==> [%p] %c{1}(%L) - %m%n"
+#Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include=*:
+# DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
+  #useSSL=false
+spring:
+  datasource:
+      url: jdbc:mysql://localhost:3306/fisheriz_db
+      username: root
+      password:
+      driver-class-name: com.mysql.jdbc.Driver
+      # Hibernate
+      # The SQL dialect makes Hibernate generate better SQL for the chosen database
+  jpa:
+      database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+      hibernate:
+        # Hibernate ddl auto (create, create-drop, validate, update)
+        ddl: update
+      show-sql: true
+# Spring Basic security
+  security:
+    basic:
+      enabled: true
+    user:
+      name: admin
+      password: 123
+#MVC Pattern
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
