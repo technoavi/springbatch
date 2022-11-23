@@ -1,6 +1,9 @@
 package com.technoavi.twiggy.model;
 
+import org.springframework.stereotype.Component;
+
 import java.util.Objects;
+
 
 public class Order {
     private int orderId;
