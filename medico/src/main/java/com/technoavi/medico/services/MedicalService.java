@@ -50,29 +50,29 @@ else
 
     }
 
-    public Medicine updateOrder( Medicine medicine) {
+    public Medicine updateMedicine( long id, Medicine medicine) {
 
-        long id = 0;
+        long idx = 0;
 //        for(int i=0; i<listOfOrders.size();i++) {
 //            if (listOfOrders.get(i).getOrderId() == (order.getOrderId())) {
 //                id = order.getOrderId();
 //                break;
 //            }
 //        }
-        Iterator hmIterator = listOfOrders.entrySet().iterator();
+      //  Iterator hmIterator = listOfOrders.entrySet().iterator();
 
 
-        while (hmIterator.hasNext()) {
-            if (listOfOrders.containsKey(medicine.getId())) {
-                id = medicine.getId();
-                break;
+     //   while (hmIterator.hasNext()) {
+      //      if (listOfOrders.containsKey(medicine.getId())) {
+      //          id = medicine.getId();
+         //       break;
 
-            }
+          //  }
 
-        }
+       // }
+       Optional<Medicine>  meds =   medicineRepository.findById(id);
+       Medicine med=meds.get();
 
-        //updated
-        Medicine med = new Medicine();
         med.setComposition(medicine.getComposition());
         med.setExpiryDate(medicine.getExpiryDate());
         med.setName(medicine.getName());
@@ -80,15 +80,17 @@ else
         med.setDosage(medicine.getDosage());
         med.setPrice(medicine.getPrice());
         //  listOfOrders.add(id,upOrder);
+        medicineRepository.save(med);
         return med;
 
     }
 
-    public String deleteOrder(int id) {
+    public String deleteOrder(long id) {
         // listOfOrders.remove(id);
         //  listOfOrders.removeIf(order-> order.getOrderId()==(id));
-        listOfOrders.remove(id);
-        return "Oder id" + id + " id cancelled!!";
+       // listOfOrders.remove(id);
+        medicineRepository.deleteById(id);
+        return "Medicine id" + id + " id cancelled!!";
     }
 
     public Medicine getMedicineByName(String name) {

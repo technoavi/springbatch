@@ -50,12 +50,12 @@ public class MedicalController {
     }
 
     @PutMapping("/update")
-    public Medicine updateOrder(@RequestBody Medicine order) {
-        return medicalService.updateOrder(order);
+    public Medicine updateMedicine(@PathVariable("id") long id, @RequestBody Medicine medicine) {
+        return medicalService.updateMedicine(id, medicine);
     }
 
     @DeleteMapping("/delete/{oderId}")
-    public String deleteOrder(@PathVariable("oderId") int id) {
+    public String deleteOrder(@PathVariable("oderId") long id) {
         return medicalService.deleteOrder(id);
     }
 }
