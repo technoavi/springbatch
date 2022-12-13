@@ -5,7 +5,7 @@ import com.exploring.explore.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Map;
+import java.util.List;
 
 @RestController
 public class StudentController {
@@ -23,23 +23,23 @@ public class StudentController {
 //    @GetMapping("/get")
     @RequestMapping(value = "/get", method = RequestMethod.GET)
     @ResponseBody
-    public Map<Integer, Student> getAllStudent() {
+    public List<Student> getAllStudent() {
         return studentService.getAllStudent();
     }
 
 //    @PutMapping("/update")
     @RequestMapping(value = "/update", method = RequestMethod.GET)
     @ResponseBody
-    public String updateStudent(@RequestBody Student s) {
-        studentService.updateStudent(s);
+    public String updateStudent(@RequestBody Long id , Student s) {
+        studentService.updateStudent(id, s);
         return "Student Updated";
     }
 
 //    @DeleteMapping("/delete")
     @RequestMapping(value = "/delete", method = RequestMethod.GET)
     @ResponseBody
-    public String deleteStudent(@RequestBody String name) {
-        studentService.deleteStudent(name);
+    public String deleteStudent(@RequestBody Long id) {
+        studentService.deleteStudent(id);
 
         return "Student Deleted";
     }
