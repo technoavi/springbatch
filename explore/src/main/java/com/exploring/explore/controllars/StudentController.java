@@ -5,6 +5,8 @@ import com.exploring.explore.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Map;
+
 @RestController
 public class StudentController {
     @Autowired
@@ -13,26 +15,33 @@ public class StudentController {
 //    @PostMapping("/create")
     @RequestMapping(value = "/create", method = RequestMethod.GET)
     @ResponseBody
-    public void createStudent(@RequestBody Student student) {
+    public Student createStudent(@RequestBody Student student) {//
         studentService.createStudentOfTabel(student);
-        System.out.println("Student Created");
+//        System.out.println("Student Created");
+        return new Student();
     }
 //    @GetMapping("/get")
-//    public Map<Integer, Student> getAllStudent() {
-//        return studentService.getAllStudent();
-//    }
-//
+    @RequestMapping(value = "/get", method = RequestMethod.GET)
+    @ResponseBody
+    public Map<Integer, Student> getAllStudent() {
+        return studentService.getAllStudent();
+    }
+
 //    @PutMapping("/update")
-//    public String updateStudent(Student s) {
-//        studentService.updateStudent(s);
-//        return "Student Updated";
-//    }
-//
+    @RequestMapping(value = "/update", method = RequestMethod.GET)
+    @ResponseBody
+    public String updateStudent(@RequestBody Student s) {
+        studentService.updateStudent(s);
+        return "Student Updated";
+    }
+
 //    @DeleteMapping("/delete")
-//    public String deleteStudent(String name) {
-//        studentService.deleteStudent(name);
-//
-//        return "Student Deleted";
-//    }
+    @RequestMapping(value = "/delete", method = RequestMethod.GET)
+    @ResponseBody
+    public String deleteStudent(@RequestBody String name) {
+        studentService.deleteStudent(name);
+
+        return "Student Deleted";
+    }
 
 }
