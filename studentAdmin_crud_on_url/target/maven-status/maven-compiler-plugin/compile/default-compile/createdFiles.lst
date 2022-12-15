@@ -1,0 +1,5 @@
+com/controller/ControllerClass.class
+com/service/ConfigurationClass.class
+com/pojo/College.class
+com/pojo/Student.class
+com/service/StudentCollegeService.class
