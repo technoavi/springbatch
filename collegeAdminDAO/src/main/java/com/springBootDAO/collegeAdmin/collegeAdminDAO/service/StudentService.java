@@ -18,7 +18,7 @@ public class StudentService {
     Random r = new Random();
     private Student copyStudent(Student oldStudent, Student newStudent) {
         oldStudent.setName(newStudent.getName());
-        oldStudent.setId(newStudent.getId());
+//        oldStudent.setId(newStudent.getId());
         oldStudent.setRollNo(newStudent.getRollNo());
         oldStudent.setStream(newStudent.getStream());
         oldStudent.setCurrentSemester(newStudent.getCurrentSemester());
