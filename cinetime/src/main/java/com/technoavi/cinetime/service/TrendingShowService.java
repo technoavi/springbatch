@@ -20,6 +20,9 @@ public class TrendingShowService {
         return trendingShowRepository.findAll();
     }
 
+    public TrendingShow getTrendingShowJson() {
+        return new TrendingShow();
+    }
     public TrendingShow getTrendingShowById(int id) {
         return trendingShowRepository.findById(id).get();
     }
@@ -29,7 +32,6 @@ public class TrendingShowService {
     }
 
     private TrendingShow copyTrendingShow(TrendingShow oldTrendingShow, TrendingShow newTrendingShow) {
-        oldTrendingShow.setMovie_name(newTrendingShow.getMovie_name());
         oldTrendingShow.setMovie_name(newTrendingShow.getMovie_name());
         oldTrendingShow.setRating(newTrendingShow.getRating());
 

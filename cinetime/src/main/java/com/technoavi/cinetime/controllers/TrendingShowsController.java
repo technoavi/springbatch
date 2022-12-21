@@ -3,10 +3,7 @@ package com.technoavi.cinetime.controllers;
 import com.technoavi.cinetime.dao.model.TrendingShow;
 import com.technoavi.cinetime.service.TrendingShowService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -17,7 +14,7 @@ public class TrendingShowsController {
     TrendingShowService trendingShowService;
 
     @PostMapping("/save") // localhost:8080/trendingshows/save
-    public TrendingShow createTrendingShow(TrendingShow trendingShow) {
+    public TrendingShow createTrendingShow(@RequestBody TrendingShow trendingShow) {
         return trendingShowService.createTrendingShow(trendingShow);
     }
 
@@ -26,19 +23,24 @@ public class TrendingShowsController {
         return trendingShowService.getAllTrendingShows();
     }
 
+    @GetMapping("/getjson") // localhost:8080/trendingshows/getjson
+    public TrendingShow getTrendingShowJson() {
+        return trendingShowService.getTrendingShowJson();
+    }
+
     @GetMapping("/getbyid/{id}") // localhost:8080/trendingshows/getbyid/{id}
-    public TrendingShow getTrendingShowById(int id) {
+    public TrendingShow getTrendingShowById(@PathVariable int id) {
         return trendingShowService.getTrendingShowById(id);
     }
 
     @GetMapping("/getbyname/{name}") // localhost:8080/trendingshows/getbyname/{name}
-    public TrendingShow getTrendingShowByName(String name) {
+    public TrendingShow getTrendingShowByName(@PathVariable String name) {
         return trendingShowService.getTrendingShowByName(name);
     }
 
 
-    @GetMapping("updatebyid/{id}") // localhost:8080/trendingshowsupdatebyid/{id}
-    public TrendingShow updateTrendingShowById(int id, TrendingShow newTrendingShow) {
+    @PutMapping("updatebyid/{id}") // localhost:8080/trendingshows/updatebyid/{id}
+    public TrendingShow updateTrendingShowById(@PathVariable int id, @RequestBody TrendingShow newTrendingShow) {
         return trendingShowService.updateTrendingShowById(id, newTrendingShow);
     }
 
@@ -46,8 +48,8 @@ public class TrendingShowsController {
 //      trendingShowService
 //    }
 
-    @GetMapping("/deletebyid/{id}") // localhost:8080/trendingshows/deletebyid/{id}
-    public String deleteTrendingShowById(int id) {
+    @DeleteMapping("/deletebyid/{id}") // localhost:8080/trendingshows/deletebyid/{id}
+    public String deleteTrendingShowById(@PathVariable int id) {
         trendingShowService.deleteTrendingShowById(id);
         return "TrendingShow deleted!!";
     }

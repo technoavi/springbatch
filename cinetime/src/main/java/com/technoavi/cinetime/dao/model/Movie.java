@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name = "movie")
@@ -26,5 +27,5 @@ public class Movie {
     @Column(name = "director")
     String director;
     @Column(name = "release_date")
-    String release_date;
+    Date release_date;
 }

@@ -42,7 +42,7 @@ public class BookTicektService {
         ticket_res.setPrice(ticket.getPrice());
         ticket_res.setStatus(ticket.isStatus());
         ticket_res.setMovieName(ticket.getMovieName());
-        ticket_res.setSeatNo(ticket_res.getSeatNo());
+        ticket_res.setSeatNo(ticket.getSeatNo());
         ticket_res.setPrice(ticket.getPrice());
         ticket_res.setScreenName(ticket.getScreenName());
 

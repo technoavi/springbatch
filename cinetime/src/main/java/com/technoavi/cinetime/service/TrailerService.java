@@ -20,6 +20,9 @@ public class TrailerService {
         return trailerRepository.findAll();
     }
 
+    public Trailer getTrailerJson() {
+        return new Trailer();
+    }
     public Trailer getTrailerById(int id) {
         return trailerRepository.findById(id).get();
     }
@@ -51,4 +54,5 @@ public class TrailerService {
         trailerRepository.deleteById(id);
         return "Trailer deleted!!";
     }
+
 }
