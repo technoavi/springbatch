@@ -1,3 +1,7 @@
 /bin/
 /.metadata/
 .DS_Store
+.project
+.git
+.classpath
+.DS_Store
