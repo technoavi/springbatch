@@ -1,0 +1,650 @@
+{
+	"info": {
+		"_postman_id": "d1a017f9-0d93-4557-a92a-15da1de31865",
+		"name": "CineMovie",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24517914"
+	},
+	"item": [
+		{
+			"name": "Movie",
+			"item": [
+				{
+					"name": "getJson Copy 2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/movie/getjson",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movie",
+								"getjson"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save Copy 2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"movie_name\": \"Kantara\",\n    \"description\": \"Spiritual moie\",\n    \"actor\": \"south actor\",\n    \"actress\": \"south actress\",\n    \"rating\": \"9.8\",\n    \"director\": \"south director\",\n    \"release_date\": \"2022-12-10T13:49:51.141Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/movie/save",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movie",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll Copy 2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/movie/getall",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movie",
+								"getall"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById Copy 2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/movie/getbyid/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movie",
+								"getbyid",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByName Copy 2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/movie/getbyname/Kantara",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movie",
+								"getbyname",
+								"Kantara"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateById Copy 2",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"movie_name\": \"Kantara\",\n    \"description\": \"Spiritual moie\",\n    \"actor\": \"south actor\",\n    \"actress\": \"south actress\",\n    \"rating\": \"9.8\",\n    \"director\": \"south director\",\n    \"release_date\": \"2022-12-10T13:49:51.141Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/movie/updatebyid/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movie",
+								"updatebyid",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteById Copy 2",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/movie/deletebyid/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movie",
+								"deletebyid",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Trailer",
+			"item": [
+				{
+					"name": "getJson Copy 2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/trailer/getjson",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trailer",
+								"getjson"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save Copy 2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"movie_name\": \"Kantare\",\n        \"description\": \"spiritual movies\",\n        \"actor\": \"south actor\",\n        \"actress\": \"south actress\",\n        \"director\": \"south director\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/trailer/save",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trailer",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll Copy 2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/trailer/getall",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trailer",
+								"getall"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById Copy 2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/trailer/getbyid/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trailer",
+								"getbyid",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByName Copy 2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/trailer/getbyname/Kantare",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trailer",
+								"getbyname",
+								"Kantare"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateById Copy 2",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"movie_name\": \"Kantare\",\n        \"description\": \"spiritual movies\",\n        \"actor\": \"south actor\",\n        \"actress\": \"south actress\",\n        \"director\": \"south director\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/trailer/updatebyid/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trailer",
+								"updatebyid",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteById Copy 2",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/trailer/deletebyid/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trailer",
+								"deletebyid",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ticket",
+			"item": [
+				{
+					"name": "getJson Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/book-ticket/getjson",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"book-ticket",
+								"getjson"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"price\": 250,\n    \"ticketId\": \"134wfr\",\n    \"noOfTickets\": 5,\n    \"date\": \"2022-12-10T13:49:51.141Z\",\n    \"location\": \"Durgapur\",\n    \"seatNo\": 5,\n    \"movieName\": \"Kantara\",\n    \"screenName\": \"3D\",\n    \"status\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/book-ticket/save",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"book-ticket",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/book-ticket/getAll",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"book-ticket",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/book-ticket/getTicket/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"book-ticket",
+								"getTicket",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByName Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/book-ticket/getname/Kantara",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"book-ticket",
+								"getname",
+								"Kantara"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateById Copy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"price\": 250,\n    \"ticketId\": \"134wfr\",\n    \"noOfTickets\": 5,\n    \"date\": \"2022-12-10T13:49:51.141Z\",\n    \"location\": \"Durgapur\",\n    \"seatNo\": 3,\n    \"movieName\": \"Kantara\",\n    \"screenName\": \"3D\",\n    \"status\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/book-ticket/update/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"book-ticket",
+								"update",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteById Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/book-ticket/deletebyid/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"book-ticket",
+								"deletebyid",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TrendingShows",
+			"item": [
+				{
+					"name": "getJson",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/trendingshows/getjson",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trendingshows",
+								"getjson"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"movie_name\": \"Avtar\",\n        \"rating\": \"9.9\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/trendingshows/save",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trendingshows",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/trendingshows/getall",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trendingshows",
+								"getall"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/trendingshows/getbyid/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trendingshows",
+								"getbyid",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/trendingshows/getbyname/Kantara",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trendingshows",
+								"getbyname",
+								"Kantara"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateById",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"movie_name\": \"Kantara\",\n        \"rating\": \"9.8\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/trendingshows/updatebyid/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trendingshows",
+								"updatebyid",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/trendingshows/deletebyid/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trendingshows",
+								"deletebyid",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
