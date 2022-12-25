@@ -12,7 +12,8 @@ import javax.persistence.*;
 public class Trailer {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    int id;
+    @Column(name="trailer_id")
+    int trailerId;
     @Column(name="movie_name")
     String movie_name;
     @Column(name="description")

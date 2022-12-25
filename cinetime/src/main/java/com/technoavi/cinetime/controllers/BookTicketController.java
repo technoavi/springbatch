@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/book-ticket") // localhost:8080/book-ticket
-@CrossOrigin("*")
+//@CrossOrigin("*")
 public class BookTicketController {
 
     @Autowired

@@ -15,11 +15,10 @@ import java.util.Date;
 public class Ticket {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    private Integer id;
+    @Column(name="ticket_id")
+    private Integer ticketId;
     @Column(name="price")
     private float price;
-    @Column(name="ticket_id")
-    private String ticketId;
     @Column(name="no_of_ticket")
     private int noOfTickets;
     @Column(name="date")

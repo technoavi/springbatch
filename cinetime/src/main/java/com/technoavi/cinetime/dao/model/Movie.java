@@ -13,19 +13,20 @@ import java.util.Date;
 public class Movie {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    int id;
+    @Column(name = "movie_id")
+    private int movieId;
     @Column(name = "movie_name")
-    String movie_name;
+    private String movie_name;
     @Column(name = "description")
-    String description;
+    private String description;
     @Column(name = "actor")
-    String actor;
+    private String actor;
     @Column(name = "actress")
-    String actress;
+    private String actress;
     @Column(name = "rating")
-    String rating;
+    private String rating;
     @Column(name = "director")
-    String director;
+    private String director;
     @Column(name = "release_date")
-    Date release_date;
+    private Date release_date;
 }

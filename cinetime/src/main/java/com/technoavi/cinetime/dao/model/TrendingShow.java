@@ -12,7 +12,8 @@ import javax.persistence.*;
 public class TrendingShow {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int id;
+    @Column(name="trending_show_id")
+    int trendingShowId;
     @Column(name="movie_name")
     String movie_name;
     @Column(name="rating")
