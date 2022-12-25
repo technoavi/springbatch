@@ -1,11 +1,11 @@
 package com.technoavi.cinetime.service;
 
-import com.technoavi.cinetime.dao.model.User;
 import com.technoavi.cinetime.dao.model.UserCredential;
 import com.technoavi.cinetime.dao.repositories.UserCredentialRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Base64;
 import java.util.List;
 
 @Service
@@ -55,9 +55,15 @@ public class UserCredentialService {
         return "UserCredential deleted!!";
     }
 
+    public static String decode(String encodedPassword) {
+        Base64.Decoder decoder = Base64.getDecoder();
+        byte[] bytes = decoder.decode(encodedPassword);
+
+        return new String(bytes);
+    }
     public boolean validate(String username, String password) {
 
         UserCredential userCredential = userCredentialRepository.findByUserName(username);
-        return (userCredential != null) ? userCredential.getPassword().equals(password) : false;
+        return (userCredential != null) ? decode(userCredential.getPassword()).equals(password) : false;
     }
 }

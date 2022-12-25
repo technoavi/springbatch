@@ -8,6 +8,8 @@ import com.technoavi.cinetime.dao.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Base64;
+
 @Service
 public class UserSignUpService {
     @Autowired
@@ -15,6 +17,10 @@ public class UserSignUpService {
     @Autowired
     UserCredentialRepository userCredentialRepository;
 
+    public static String encode(String password) {
+        Base64.Encoder encoder = Base64.getEncoder();
+        return encoder.encodeToString(password.getBytes());
+    }
     public User save(UserSignUp userSignUp) {
         User user = new User();
         user.setEmail(userSignUp.getEmail());
@@ -26,7 +32,9 @@ public class UserSignUpService {
         UserCredential userCredential = new UserCredential();
         userCredential.setName(userSignUp.getName());
         userCredential.setUserId(userSignUp.getUserId());
-        userCredential.setPassword((userSignUp.getPassword()));
+
+
+        userCredential.setPassword(encode(userSignUp.getPassword()));
 
         userCredentialRepository.save(userCredential);
         return userRepository.save(user);
